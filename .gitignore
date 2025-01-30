@@ -1,0 +1,26 @@
+# Abaikan Virtual Environment
+venv/
+env/
+.venv/
+
+# Abaikan file yang dibuat editor
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+
+# Abaikan file database SQLite (jika ada)
+db.sqlite3
+*.sqlite3
+
+# Abaikan file lingkungan & konfigurasi pribadi
+.env
+*.env
+
+# Abaikan file static & media yang bisa di-generate ulang
+/static/
+/media/
+
+# Abaikan file migrasi yang bisa di-generate ulang (opsional)
+*/migrations/*.py
+*/migrations/*.pyc
