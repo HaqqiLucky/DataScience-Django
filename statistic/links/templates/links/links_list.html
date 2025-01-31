@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project List</title>
+</head>
+<body>
+
+
+    <section>
+        <h1>List</h1>
+
+        {% for link in links %}
+            <article>
+                <h2>
+                    <a href=" {% url 'links:page' slug=link.slug %}">
+                        {{ link.judul}}
+                    </a>
+                </h2>
+                <p>{{link.tgl_dibuat}}</p>
+                <p>{{link.tgl_dipublish}}</p>
+            </article>
+
+        {% endfor %}
+
+    </section>
+</body>
+</html>

@@ -15,3 +15,5 @@ def homepage(request) :
     }
 
     return render(request, 'home.html', tanggal )
+
+

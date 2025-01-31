@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ link.judul}}</title>
+</head>
+<body>
+
+
+    <section>
+        <h1>{{ link.judul}}</h1>
+            <p>{{link.tgl_dibuat}}</p>
+            <p>{{link.tgl_dipublish}}</p>
+            <div>{{link.get_konten_html|safe}}</div>
+
+
+    </section>
+</body>
+</html>
