@@ -24,6 +24,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
+    path('test/', views.test),
     path('links/', include('links.urls')),
     path('markdownx/', include(markdownx_urls))
 

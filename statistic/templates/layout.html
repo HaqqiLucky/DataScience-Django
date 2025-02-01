@@ -7,17 +7,34 @@
     <title>Document</title>
     <script src="{% static "js/script.js" %}" defer></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>Tanggal Hari ini: {{date}}</p>
-    <p>Hari: {{day}}</p>
-    <p id="clock">{{time}} </p>
 
-    <div class="linkproject">
-        <p>Ini list project data scienceku</p>
-        <a href="{% url 'links:list'%}">KLIK SINI</a>
-
-
+    <div class="home">
+        <p class="tanggal">{{date}}</p>
+        <p class="hari">{{day}}</p>
+        <p id="clock">{{time}} </p>
     </div>
+
+    <div class"halaman2">
+        <div class="kotak-kotak">
+            <div class="kotak" >
+                <a class="tulisan-dalam-kotak" >About Me</a>
+            </div>
+            <div class="kotak">
+                <a class="tulisan-dalam-kotak" href="{% url 'links:list'%}">
+                    Project Link</a>
+            </div>
+            <div class="kotak">
+                <a class="tulisan-dalam-kotak">Another Interest</a>
+            </div>
+        </div>
+    </div>
+
+    
 </body>
 </html>

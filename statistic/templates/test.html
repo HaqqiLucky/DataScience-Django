@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagian Bertumpuk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section {
+            min-height: 100vh; /* Setiap bagian punya tinggi minimal 100% viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .section-1 {
+            background-color: #3498db; /* Warna biru */
+        }
+
+        .section-2 {
+            background-color: #2ecc71; /* Warna hijau */
+        }
+
+        .section-3 {
+            background-color: #e74c3c; /* Warna merah */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section section-1">Bagian 1</div>
+    <div class="section section-2">Bagian 2</div>
+    <div class="section section-3">Bagian 3</div>
+
+</body>
+</html>

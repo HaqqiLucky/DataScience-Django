@@ -16,4 +16,6 @@ def homepage(request) :
 
     return render(request, 'home.html', tanggal )
 
+def test(request):
+    return render(request,'test.html')
 

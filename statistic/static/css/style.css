@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html, body{
+    height: 100%;
+    border: 10px solid #EFF7CF;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    /* width: 100vw; */
+}
+
+#clock{
+    font-size: 10rem;
+    font-family: "Iceberg", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+.hari{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: "Anta", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tanggal{
+    font-size: 3rem;
+    font-family: "Iceberg", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* p {
+    font-size: 90px;
+} */
+
+.kotak-kotak{
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 50px;
+    /* background-color: green; */
+    /* height: 100%;
+    border: 10px solid #EFF7CF; */
+
+}
+
+
+.kotak-kotak .kotak{
+    /* position: relative; */
+    width: 30vw;
+    height: 60vh;
+    background-color: #f4f4f4;
+    border: 5px solid #D1DBC2;
+    transition: all 0.4s ease-in-out;
+
+    /* margin: 0; */
+    /* transform: skewX(-20deg); */
+}
+
+.kotak:hover{
+    transform: translateX(-5px) scale(1.1);
+    /* transform: translate3d(50px, 50px, 50px); */
+
+}
+
+/* .kotak::after, .kotak::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    /* background-color: aquamarine; */
+/* }
+
+.kotak::before{
+    top: 0;
+}
+
+.kotak::after{
+    bottom: 0;
+} */
+ /* */ 
+
+ .kotak-kotak .kotak .tulisan-dalam-kotak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: "Anta", serif;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+ }
+
+ .halaman2{
+    height: 100%;
+    width: 100vw;
+ }
