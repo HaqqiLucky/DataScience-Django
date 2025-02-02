@@ -13,28 +13,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="home">
-        <p class="tanggal">{{date}}</p>
-        <p class="hari">{{day}}</p>
-        <p id="clock">{{time}} </p>
-    </div>
-
-    <div class"halaman2">
-        <div class="kotak-kotak">
-            <div class="kotak" >
-                <a class="tulisan-dalam-kotak" >About Me</a>
+    <div class="container" id="container">
+        <div class="section section-1">
+            <div class="home">
+                {% comment %} <p>hhuhuhuh{{quote.quote}}</p>
+                <p>quote :  {{quote.author}}</p> {% endcomment %}
+                <p class="tanggal">{{date}}</p>
+                <p class="hari">{{day}}</p>
+                <p id="clock">{{time}} </p>
             </div>
-            <div class="kotak">
-                <a class="tulisan-dalam-kotak" href="{% url 'links:list'%}">
-                    Project Link</a>
-            </div>
-            <div class="kotak">
-                <a class="tulisan-dalam-kotak">Another Interest</a>
+        </div>
+        <div class="section section-2">
+            <div class="kotak-kotak">
+                <div class="kotak" >
+                    <a class="tulisan-dalam-kotak" >About Me</a>
+                </div>
+                <div class="kotak">
+                    <a class="tulisan-dalam-kotak" href="{% url 'links:list'%}">
+                        Project Link</a>
+                </div>
+                <div class="kotak">
+                    <a class="tulisan-dalam-kotak">Another Interest</a>
+                </div>
             </div>
         </div>
     </div>
-
     
+    <div class="button-container" id="beberapa-button">
+        <button onclick="goToPage(1)">Welcome</button>
+        <button onclick="goToPage(2)">Option</button>
+    </div> 
+
+    <div class="line" id="toggleLine"></div>
 </body>
 </html>

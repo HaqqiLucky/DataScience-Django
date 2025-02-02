@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bagian Bertumpuk</title>
+    <title>Toggle Div</title>
     <style>
         * {
             margin: 0;
@@ -11,34 +11,55 @@
             box-sizing: border-box;
         }
 
-        .section {
-            min-height: 100vh; /* Setiap bagian punya tinggi minimal 100% viewport */
+        .container {
+            width: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
         }
 
-        .section-1 {
-            background-color: #3498db; /* Warna biru */
+        /* Garis yang tampak di awal */
+        .line {
+            width: 100px;
+            height: 2px;
+            background-color: black;
+            cursor: pointer;
         }
 
-        .section-2 {
-            background-color: #2ecc71; /* Warna hijau */
+        /* Div yang akan muncul setelah ditekan */
+        .hidden-div {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            display: none;  /* Disembunyikan di awal */
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .section-3 {
-            background-color: #e74c3c; /* Warna merah */
+        /* Efek muncul */
+        .show {
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="section section-1">Bagian 1</div>
-    <div class="section section-2">Bagian 2</div>
-    <div class="section section-3">Bagian 3</div>
+<div class="buroncontainer">
+    <div class="line" id="toggleLine"></div> <!-- Garis -->
+    <div class="hidden-div" id="hiddenDiv">Ini adalah div yang muncul setelah ditekan!</div> <!-- Div yang tersembunyi -->
+</div>
+
+<script>
+    const toggleLine = document.getElementById("toggleLine");
+    const hiddenDiv = document.getElementById("hiddenDiv");
+
+    toggleLine.addEventListener("click", function() {
+        hiddenDiv.classList.toggle("show");  // Tambah atau hapus class "show"
+    });
+</script>
 
 </body>
 </html>

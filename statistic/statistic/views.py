@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from .api_service import get_quotes
 
 def homepage(request) :
     now = datetime.now()
@@ -14,8 +15,13 @@ def homepage(request) :
         "time": time_format
     }
 
-    return render(request, 'home.html', tanggal )
+    return render(request, 'layout.html', tanggal )
 
 def test(request):
     return render(request,'test.html')
+
+def random_quotes(request):
+    random_quote_data = get_quotes()
+    return render(request, 'layout.html', {"quote":random_quote_data})
+
 
