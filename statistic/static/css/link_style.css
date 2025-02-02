@@ -1,0 +1,83 @@
+.kotak-tengah{
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #FFFDF0;
+    width: 80vw;
+    height: 100vh;
+    margin-left: 10vw;
+    border-radius: 20px;
+    border: 3px solid #D9DFC6;
+}
+
+/* hr {
+    width: 50vw;
+} */
+
+/* .agak-bawah{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    margin-top: 25px;
+    height: 20px;
+} */
+
+.kotakpanjang-list{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* gap: -12px; */
+    background-color: #D9DFC6;
+    height: 17vh;
+    width: 70vw;
+    margin-left: 5vw;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    transition: 0.3s ease;
+}
+
+
+.row{
+    display: flex;
+    gap: 5%;
+}
+
+.judul-projek{
+    font-size: 1.5rem;
+    max-height: 1%;
+    text-transform: capitalize;
+    font-family: "Anta", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.judul-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    font-family: "Anta", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.buat-tulisan{
+    margin-left: 10%;
+    /* margin-top: 2%; */
+}
+
+.link-to-detail{
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 2%;
+    background-color: #FFFDF0;
+    border: 2px solid #EFF3EA;
+    border-radius: 10px;
+    /* transition: 0.3s ease; */
+}
+
+/* .link-to-detail :hover{
+    background: #FFFDF0;
+    border-radius: 20px;
+} */

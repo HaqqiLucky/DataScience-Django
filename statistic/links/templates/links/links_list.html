@@ -1,29 +1,42 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project List</title>
+    <script src="{% static "js/links_script.js" %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/link_style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 </head>
 <body>
 
+        <div class="kotak-tengah">
+            <h1 class="judul-page">List</h1>
+            {% for link in links %}
+            <div class="kotakpanjang-list">
+                <div class="buat-tulisan">       
+                    <p
+                    class="judul-projek">
+                    {{ link.judul}}
+                    </p>
+                    <div class="row">
+                        <p class="tanggal"> Made in {{link.tgl_dibuat}}</p>
+                        <p class="tanggal"> Published in {{link.tgl_dipublish}} </p>
+                        <button class="link-to-detail" 
+                        data-url="{% url 'links:page' slug=link.slug %}">
+                            Click here to detail
+                        </button>
+                    </div>
 
-    <section>
-        <h1>List</h1>
-
-        {% for link in links %}
-            <article>
-                <h2>
-                    <a href=" {% url 'links:page' slug=link.slug %}">
-                        {{ link.judul}}
-                    </a>
-                </h2>
-                <p>{{link.tgl_dibuat}}</p>
-                <p>{{link.tgl_dipublish}}</p>
-            </article>
-
-        {% endfor %}
-
-    </section>
+                </div>
+            </div>
+            {% endfor %} 
+        </div>
 </body>
 </html>
+
+{% comment %} href=" {% url 'links:page' slug=link.slug %}" {% endcomment %}

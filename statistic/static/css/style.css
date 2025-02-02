@@ -11,13 +11,13 @@ html, body{
     overflow: hidden;
 }
 
-.quotes{
+/* .quotes{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 100px;
-}
+} */
 .home{
     display: flex;
     justify-content: center;
@@ -62,13 +62,13 @@ html, body{
     background-color: #D9DFC6;
     transform: translateX(-50%);
     border-radius: 20px;
-    transition: opacity 0.4s ease, visibility 0s 0.4s;
+    transition: opacity 0.9s ease, visibility 0s 0.4s;
 }
 
 .button-container.show{
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.4s ease, visibility 0s 0s;
+    transition: opacity 1.0s ease, visibility 0s 0s;
 }
 .line{
     position: absolute;
@@ -175,8 +175,10 @@ button:hover{
 }
 
 .kotak:hover{
-    transform: translateX(-5px) scale(1.1);
-    transform: translate3d(50px, 50px, 50px);
+    /* transform: translateX(-5px) scale(1.1); */
+    transform: translate3d(10px, -30px, 0px);
+    background-color: #FFF2C2;
+    border:#D9DFC6 ;
 }
 
 /* .kotak::after, .kotak::before{
@@ -221,5 +223,6 @@ button:hover{
  } */
 
  /* {} */
+
 
 
